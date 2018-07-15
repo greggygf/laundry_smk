@@ -1,0 +1,5 @@
+Hak Akses :
+
+-Admin : bisa mengakses semua yang ada di website,termasuk formulir pendaftaran,update & delete database
+-Operator : bisa mengakses semua yang ada di website,kecuali data LOGIN dan pendaftaran LOGIN
+-user : bisa mengakses semua yang ada di website,kecuali update & delete,mengakses formulir pendaftaran LOGIN,dan data LOGIN
