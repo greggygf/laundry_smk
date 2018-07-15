@@ -1,0 +1,37 @@
+input[type=text],input[type=password] {
+    width: 15%;
+	background:rgba(0,0,0,0.0);
+	color:white;
+    padding: 5px 5px;
+    margin: 2px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-size:15px;
+}
+
+body {
+	 color:white;
+     margin: auto;
+     position: absolute;
+     top: 250px; left: 0; bottom: 0; right: 0;
+	 font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+
+.tombol{
+  background:black;
+  width:16%;
+  color:white;
+  padding:10px 10px;
+  text-decoration:none;
+  font-family:sans-serif;
+  font-size:11pt;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.tombol:hover
+{
+	background-color:#252424;
+}
