@@ -1,2 +1,2 @@
-# laundry_smk
-kerja proyek smk - laundry
+# laundry-smk
+Tugas Web Dinamis - Website Laundry Online ( SMK / 2016 )

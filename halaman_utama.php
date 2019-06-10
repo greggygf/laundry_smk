@@ -12,42 +12,45 @@ else
 ?>
 
 <!doctype html>
-<html><head>
-<meta charset="utf-8">
+<html>
 
-<script type='text/javascript'>
+<head>
+	<meta charset="utf-8">
 
-    msg = " GREGGY LAUNDRY ONLINE ";
+	<script type='text/javascript'>
+		msg = " GREGGY LAUNDRY ONLINE ";
 
-    msg = " | PREMIUM LAUNDRY | FREE ONGKIR | BASED MALANG KOTA --- " + msg;pos = 0;
+		msg = " | PREMIUM LAUNDRY | FREE ONGKIR | BASED MALANG KOTA --- " + msg;
+		pos = 0;
 
-    function scrollMSG() {
+		function scrollMSG() {
 
-    document.title = msg.substring(pos, msg.length) + msg.substring(0, pos); pos++;
+			document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+			pos++;
 
-    if (pos > msg.length) pos = 0
+			if (pos > msg.length) pos = 0
 
-    window.setTimeout("scrollMSG()",90);
+			window.setTimeout("scrollMSG()", 90);
 
-    }
+		}
 
-    scrollMSG();
+		scrollMSG();
+	</script>
 
-    </script>
-
-<link rel="stylesheet" type="text/css" href="style.css"/>
-<link href='http://icons.iconarchive.com/icons/iconleak/cerulean/128/science-chemistry-icon.png' rel='SHORTCUT ICON'/>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link href='http://icons.iconarchive.com/icons/iconleak/cerulean/128/science-chemistry-icon.png'
+		rel='SHORTCUT ICON' />
 
 </head>
 
 <body>
 
 
-<div id="luar">
-<nav>
-	<div id="menu-wrap">
-    
-    	<?php
+	<div id="luar">
+		<nav>
+			<div id="menu-wrap">
+
+				<?php
 			$aksi_barang = "aksi_barang.php";
 			$aksi_karyawan = "aksi_karyawan.php";
 			$aksi_konsumen = "aksi_konsumen.php";
@@ -84,112 +87,169 @@ else
 			$tabel_login = "tabel_login.php";
 			$kebijakan = "kebijakan.php";
 		?>
-    	<ul>
-			<a href="halaman_utama.php?beranda=$beranda"><li id="beranda">Beranda </li></a>
-			<a href="halaman_utama.php?tentang_kami=$tentang_kami"><li>Tentang Kami </li></a>
-			<li>Kontak Kami
-		<ul>
-			<a href="halaman_utama.php?alamat_kami=$alamat_kami"><li>Alamat Kami </li></a>
-			<a href="halaman_utama.php?kebijakan=$kebijakan"><li>Kebijakan & Ketentuan </li></a>
-		</ul>
-        	<?php
+				<ul>
+					<a href="halaman_utama.php?beranda=$beranda">
+						<li id="beranda">Beranda </li>
+					</a>
+					<a href="halaman_utama.php?tentang_kami=$tentang_kami">
+						<li>Tentang Kami </li>
+					</a>
+					<li>Kontak Kami
+						<ul>
+							<a href="halaman_utama.php?alamat_kami=$alamat_kami">
+								<li>Alamat Kami </li>
+							</a>
+							<a href="halaman_utama.php?kebijakan=$kebijakan">
+								<li>Kebijakan & Ketentuan </li>
+							</a>
+						</ul>
+						<?php
 			if($_SESSION['TypeUser']=="user")
 			{
 			?>
-        	<li id="nbsp">&nbsp;</li>
-            <?php } ?>
-            
-        	<?php 
+					<li id="nbsp">&nbsp;</li>
+					<?php } ?>
+
+					<?php 
 			if($_SESSION['TypeUser']!=="user")
 			{
 			?>
-        	<li>Formulir Pendaftaran
-           	<ul>
-            	<a href="halaman_utama.php?formulir_barang=$formulir_barang"><li>Barang</li></a>
-                <a href="halaman_utama.php?formulir_jenislaundry=$formulir_jenislaundry"><li>Jenis Laundry</li></a>
-                <a href="halaman_utama.php?formulir_karyawan=$formulir_karyawan"><li>Karyawan</li></a>
-                <?php
+					<li>Formulir Pendaftaran
+						<ul>
+							<a href="halaman_utama.php?formulir_barang=$formulir_barang">
+								<li>Barang</li>
+							</a>
+							<a href="halaman_utama.php?formulir_jenislaundry=$formulir_jenislaundry">
+								<li>Jenis Laundry</li>
+							</a>
+							<a href="halaman_utama.php?formulir_karyawan=$formulir_karyawan">
+								<li>Karyawan</li>
+							</a>
+							<?php
                 if($_SESSION['TypeUser']=="admin")
 				{
 				?>
-                <a href="halaman_utama.php?formulir_login=$formulir_login"><li>Login</li></a>
-                <?php } ?>
-                <a href="halaman_utama.php?formulir_konsumen=$formulir_konsumen"><li>Member</li></a>
-                <a href="halaman_utama.php?formulir_supplier=$formulir_supplier"><li>Supplier</li></a>
-                <a href="halaman_utama.php?formulir_tarif=$formulir_tarif"><li>Tarif</li></a>
-            </ul>
-            <?php } ?>
-        </li>
-        
-            <a href="logout.php" onClick ="return confirm('Apakah anda yakin untuk logout, <?php echo $_SESSION['username']; ?>?')"><li id="logout"><b>LOGOUT</b></li></a>
-		</li>
-		</ul>
-    </div>
-    </nav>
-    
-    <div id="header">
-    </div>
-    
-	<div id="isi">
-    	
-        <div id="menu_kiri">
-        
-        	<div id="menu_produk">
-            
-           		<h2>Pelayanan Kami</h2><hr color="#0263A0"><br>
-                <p>Cuci</p>
-                <p>Cuci Kering</p>
-                <p>Cuci Kering Setrika</p><br>
-           	
-            </div>
-            
-            <div id="menu_kontak">
-            
-            	<h2>Kontak Kami</h2><hr color="#0263A0"><br>
-                <p><img src="logo/bbm2.png" width="25" height="25" align="center">&nbsp;&nbsp;D0D9BE45</p>
-                <p><img src="logo/wa2.png" width="25" height="25" align="center"> &nbsp;087759659653</p>
-                <p><img src="logo/email2.png" width="25" height="25" align="center">&nbsp;&nbsp;greggygf@gmail.com</p><br>
-            </div>
-            
-            <div id="menu_sosial">
-            
-            	<h2>Sosial Media</h2><hr color="#0263A0"><br>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.instagram.com/greg022xrv" target="_blank"><img src="logo/instagram.png" width="40" height="40" align="center">&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="http://www.facebook.com/bluohazard48" target="_blank"><img src="logo/facebbok.png" width="40" height="40" align="center">&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="http://www.twitter.com/GreggyGF" target="_blank"><img src="logo/twitter.png" width="40" height="40" align="center"><br><br></a>
-            
-            </div>
-            
-            <div id="menu_halaman">
-            
-            	<h2>Halaman</h2><hr color="#0263A0"><br>
-                <a href="halaman_utama.php?tabel_konsumen=$tabel_konsumen"><p>Anggota Member</p></a>
-                <a href="halaman_utama.php?tabel_barang=$tabel_barang"><p>Barang</p></a>
-                <?php
+							<a href="halaman_utama.php?formulir_login=$formulir_login">
+								<li>Login</li>
+							</a>
+							<?php } ?>
+							<a href="halaman_utama.php?formulir_konsumen=$formulir_konsumen">
+								<li>Member</li>
+							</a>
+							<a href="halaman_utama.php?formulir_supplier=$formulir_supplier">
+								<li>Supplier</li>
+							</a>
+							<a href="halaman_utama.php?formulir_tarif=$formulir_tarif">
+								<li>Tarif</li>
+							</a>
+						</ul>
+						<?php } ?>
+					</li>
+
+					<a href="logout.php"
+						onClick="return confirm('Apakah anda yakin untuk logout, <?php echo $_SESSION['username']; ?>?')">
+						<li id="logout"><b>LOGOUT</b></li>
+					</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div id="header">
+		</div>
+
+		<div id="isi">
+
+			<div id="menu_kiri">
+
+				<div id="menu_produk">
+
+					<h2>Pelayanan Kami</h2>
+					<hr color="#0263A0"><br>
+					<p>Cuci</p>
+					<p>Cuci Kering</p>
+					<p>Cuci Kering Setrika</p><br>
+
+				</div>
+
+				<div id="menu_kontak">
+
+					<h2>Kontak Kami</h2>
+					<hr color="#0263A0"><br>
+					<p><img src="logo/wa2.png" width="25" height="25" align="center"> &nbsp;087759659653</p>
+					<p><img src="logo/email2.png" width="25" height="25" align="center">&nbsp;&nbsp;greggygf@gmail.com
+					</p><br>
+				</div>
+
+				<div id="menu_sosial">
+
+					<h2>Sosial Media</h2>
+					<hr color="#0263A0"><br>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.instagram.com/greggygf" target="_blank"><img
+								src="logo/instagram.png" width="40" height="40"
+								align="center">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						<a href="http://www.facebook.com/bluohazard" target="_blank"><img src="logo/facebbok.png"
+								width="40" height="40" align="center">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						<a href="http://www.twitter.com/GreggyGF" target="_blank"><img src="logo/twitter.png" width="40"
+								height="40" align="center"><br><br></a>
+
+				</div>
+
+				<div id="menu_halaman">
+
+					<h2>Halaman</h2>
+					<hr color="#0263A0"><br>
+					<a href="halaman_utama.php?tabel_konsumen=$tabel_konsumen">
+						<p>Anggota Member</p>
+					</a>
+					<a href="halaman_utama.php?tabel_barang=$tabel_barang">
+						<p>Barang</p>
+					</a>
+					<?php
                 if($_SESSION['TypeUser']=="admin")
 				{
 				?>
-                <a href="halaman_utama.php?tabel_login=$tabel_login"><p>Data Login</p></a>
-                <?php }?>
-                <a href="halaman_utama.php?tabel_pemakaian_barang=$tabel_pemakaian_barang"><p>Data Pemakaian Barang</p></a>
-                <a href="halaman_utama.php?tabel_pembelian=$tabel_pembelian"><p>Data Pembelian</p></a>
-                <a href="halaman_utama.php?tabel_rincian_pembelian=$tabel_rincian_pembelian"><p>Data Rincian Pembelian</p></a>
-                <a href="halaman_utama.php?tabel_rincian_transaksi=$tabel_rincian_transaksi"><p>Data Rincian Transaksi</p></a>
-                <a href="halaman_utama.php?tabel_transaksi=$tabel_transaksi"><p>Data Transaksi</p></a>
-                <a href="halaman_utama.php?tabel_jenislaundry=$tabel_jenislaundry"><p>Jenis Laundry</p></a>
-                <a href="halaman_utama.php?tabel_karyawan=$tabel_karyawan"><p>Karyawan Laundry</p></a>    
-                <a href="halaman_utama.php?tabel_supplier=$tabel_supplier"><p>Supplier Laundry</p></a>
-                <a href="halaman_utama.php?tabel_tarif=$tabel_tarif"><p>Tarif</p></a>
-                
-                <br>
-                 
-            </div>
-            
-        </div>
-        
-        <div id="konten">
-        
-        	<?php
+					<a href="halaman_utama.php?tabel_login=$tabel_login">
+						<p>Data Login</p>
+					</a>
+					<?php }?>
+					<a href="halaman_utama.php?tabel_pemakaian_barang=$tabel_pemakaian_barang">
+						<p>Data Pemakaian Barang</p>
+					</a>
+					<a href="halaman_utama.php?tabel_pembelian=$tabel_pembelian">
+						<p>Data Pembelian</p>
+					</a>
+					<a href="halaman_utama.php?tabel_rincian_pembelian=$tabel_rincian_pembelian">
+						<p>Data Rincian Pembelian</p>
+					</a>
+					<a href="halaman_utama.php?tabel_rincian_transaksi=$tabel_rincian_transaksi">
+						<p>Data Rincian Transaksi</p>
+					</a>
+					<a href="halaman_utama.php?tabel_transaksi=$tabel_transaksi">
+						<p>Data Transaksi</p>
+					</a>
+					<a href="halaman_utama.php?tabel_jenislaundry=$tabel_jenislaundry">
+						<p>Jenis Laundry</p>
+					</a>
+					<a href="halaman_utama.php?tabel_karyawan=$tabel_karyawan">
+						<p>Karyawan Laundry</p>
+					</a>
+					<a href="halaman_utama.php?tabel_supplier=$tabel_supplier">
+						<p>Supplier Laundry</p>
+					</a>
+					<a href="halaman_utama.php?tabel_tarif=$tabel_tarif">
+						<p>Tarif</p>
+					</a>
+
+					<br>
+
+				</div>
+
+			</div>
+
+			<div id="konten">
+
+				<?php
 			
 				if(isset($_GET['tentang_kami']))
 				{
@@ -368,18 +428,19 @@ else
 			
 			
 			?>
-        
-        </div>
-        
-        
-    </div>
-    
-    <div id="footer">© 2016 Greggy Gianini Firmansyah
-    </div>
 
-</div>
-    
+			</div>
+
+
+		</div>
+
+		<div id="footer">© 2016 Greggy Gianini Firmansyah
+		</div>
+
+	</div>
+
 </body>
+
 </html>
 
 <?php } ?>
