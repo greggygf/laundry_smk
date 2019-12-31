@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 30, 2019 at 12:03 PM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.1.21
+-- Generation Time: Dec 31, 2019 at 10:08 AM
+-- Server version: 10.1.40-MariaDB
+-- PHP Version: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -40,8 +40,8 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`KodeBarang`, `NmBarang`, `Stok`, `TglUpdateStok`) VALUES
-('item1', 'Arcana', 14, '2016-09-14'),
-('item2', 'Immortal', 10, '2016-10-21');
+('item1', 'Sabun', 14, '2016-09-14'),
+('item2', 'Shampoo', 10, '2016-10-21');
 
 -- --------------------------------------------------------
 
@@ -82,11 +82,7 @@ CREATE TABLE `karyawan` (
 --
 
 INSERT INTO `karyawan` (`NIK`, `NmKaryawan`, `AlmtKaryawan`, `TelpKaryawan`, `GenderKaryawan`) VALUES
-('9383829292', 'Siswo Aji', 'Malang', '0818837392920', 'L'),
-('admin', 'Greggy Gianini F.', 'Malang', '087759659653', 'L'),
-('kyw02', 'Acha Hisyam', 'Jl.Kenangan', '085444333155', 'P'),
-('kyw03', 'Gilang Putra', 'Jl.Polehan Gg.4 No.30', '085444993201', 'L'),
-('mmg111', 'Misael Farhan', 'Jl.Gempol Bisa Malang Bisa Sidoarjo', '0888575757575', 'L');
+('admin', 'Greggy Gianini F.', 'Malang', '0000', 'L');
 
 -- --------------------------------------------------------
 
@@ -106,11 +102,9 @@ CREATE TABLE `konsumen` (
 --
 
 INSERT INTO `konsumen` (`KodeKonsumen`, `NmKonsumen`, `AlmtKonsumen`, `TelpKonsumen`) VALUES
-('kmz87', 'mau tahu aja', 'jl pelan-pelan banyak anak kecil yoooowh', '083876543219'),
-('ksm03', 'Kucing Arab', 'Jl.Ciliwung 94', '081555998955'),
-('mmb22', 'Robertus', 'Jl.Kenangan', '191919199191'),
-('mmb3', 'Kelinci ', 'rumah', '09938488484'),
-('mmb4', 'Muhammad Kurniawan', 'Jl.turun dituntun', '303030303030');
+('kmz87', 'Member 1', 'Malang', '0000'),
+('ksm03', 'Member 2', 'Malang', '0000'),
+('mmb22', 'Member 3', 'Malang', '0000');
 
 -- --------------------------------------------------------
 
@@ -130,9 +124,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`username`, `password`, `TypeUser`, `NIK`) VALUES
-('achahisyam', 'okebos', 'user', 'kyw02'),
-('admin', 'admin', 'admin', 'admin'),
-('gilang_p', 'satuduatig', 'operator', 'kyw03');
+('admin', 'admin', 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -168,13 +160,6 @@ CREATE TABLE `pembelian` (
   `NIK` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `pembelian`
---
-
-INSERT INTO `pembelian` (`NoPembelian`, `TglPembelian`, `TotalBiaya`, `IDSupplier`, `NIK`) VALUES
-('beli2', '2016-08-06', 90000, 'sup02', 'kyw03');
-
 -- --------------------------------------------------------
 
 --
@@ -188,13 +173,6 @@ CREATE TABLE `rincian_pembelian` (
   `KodeBarang` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `rincian_pembelian`
---
-
-INSERT INTO `rincian_pembelian` (`NoRincian`, `Jumlah`, `NoPembelian`, `KodeBarang`) VALUES
-('rincian01', 10, 'beli2', 'item2');
-
 -- --------------------------------------------------------
 
 --
@@ -207,13 +185,6 @@ CREATE TABLE `rincian_transaksi` (
   `NoTransaksi` varchar(5) NOT NULL,
   `IDJenisPakaian` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `rincian_transaksi`
---
-
-INSERT INTO `rincian_transaksi` (`IDRincian`, `Jumlah`, `NoTransaksi`, `IDJenisPakaian`) VALUES
-('rincian_t1', 100, 't0002', 'c_sajadah');
 
 -- --------------------------------------------------------
 
@@ -233,9 +204,9 @@ CREATE TABLE `supplier` (
 --
 
 INSERT INTO `supplier` (`IDSupplier`, `NmSupplier`, `AlmtSupplier`, `TelpSupplier`) VALUES
-('sup01', 'Express', 'Jl.Bend.Sutarmi No.9E', '0341558029'),
-('sup02', 'Laundryplasa', 'Jl. Sulfat Agung, Indah II no 31A', '0341495805'),
-('sup03', 'Irul 48', 'Jl.Letjend Soetoyo IV No.34 Malang', '03417562123');
+('sup01', 'Supplier 1', 'Malang', '0000'),
+('sup02', 'Supplier 2', 'Malang', '0000'),
+('sup03', 'Supplier 3', 'Malang', '0000');
 
 -- --------------------------------------------------------
 
@@ -273,13 +244,6 @@ CREATE TABLE `transaksi` (
   `KodeKonsumen` varchar(5) NOT NULL,
   `NIK` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `transaksi`
---
-
-INSERT INTO `transaksi` (`NoTransaksi`, `TglTransaksi`, `TglAmbil`, `Diskon`, `KodeKonsumen`, `NIK`) VALUES
-('t0002', '2016-08-06', '2016-08-25', 8000, 'mmb3', 'kyw02');
 
 --
 -- Indexes for dumped tables
