@@ -1,6 +1,10 @@
-<h2>Kebijakan (Terms & Conditions) </h2><hr color="#0263A0"><br>
-        <img src="logo/tc.jpg" width="600" height="200" align="center"><br>
-        <br><p><font color="red"><b>Kebijakan Harga :</b></font> Harga adalah cerminan dari nilai yang dipersepsikan oleh konsumen. Dalam sebuah persaingan untuk mendapatkan konsumen, perusahaan selalu menggunakan taktik dan strateginya dalam mengalahkan pesaingnya. Salah satu taktik itu adalah “Harga”.</p>
+<h2>Kebijakan (Terms & Conditions) </h2>
+<hr color="#0263A0"><br>
+<img src="logo/tc.jpg" width="600" height="200" align="center"><br>
+<br>
+<p>
+        <font color="red"><b>Kebijakan Harga :</b></font> Harga adalah cerminan dari nilai yang dipersepsikan oleh konsumen. Dalam sebuah persaingan untuk mendapatkan konsumen, perusahaan selalu menggunakan taktik dan strateginya dalam mengalahkan pesaingnya. Salah satu taktik itu adalah “Harga”.
+</p>
 
 <p>Greggy Laundry sebagai Jasa Layanan Laundry sedang berupaya memberikan hasil pelayanan yang baik menurut para konsumennya. Maka Greggy Laundry dalam memberikan kebijakan layanan adalah berbanding lurus dengan harga yang diberikan. Dan Greggy Laundry mempunyai standar hasil akhir (finishing) dalam memberikan (delivery) kepada para pelanggannya.</p><br>
 
@@ -10,7 +14,9 @@
 
 
 
-<p><font color="#FF8600"><b>KETENTUAN GREGGY-LAUNDRY :</b></font></p><br>
+<p>
+        <font color="#FF8600"><b>KETENTUAN GREGGY-LAUNDRY :</b></font>
+</p><br>
 
 <p>1. LAYANAN Greggy LAUNDRY : Semua jenis layanan,harga, serta GARANSI layanan dapat dilihat di Tabel.</p><br>
 
@@ -18,7 +24,7 @@
 
 <p>3. Greggy Laundry memberikan beberapa pilihan solusi kenyamanan layanan atas laundry anda , diantaranya adalah <b>HARGA SATUAN & HARGA KILOAN</b>.</p><br>
 
-<p>4. <font color="blue"><b>Jam BUKA dan TUTUP</b></font>  tidaklah mengikat. Kami berusaha memahami dan mencoba mengikuti kesibukan anda. Diskusikan kepada Greggy Laundry untuk hal tersebut.</p><br>
+<p>4. <font color="blue"><b>Jam BUKA dan TUTUP</b></font> tidaklah mengikat. Kami berusaha memahami dan mencoba mengikuti kesibukan anda. Diskusikan kepada Greggy Laundry untuk hal tersebut.</p><br>
 
 <p>5. Greggy Laundry berhak memberikan solusi waktu pengerjaan jika operasional kami over load / beban penuh / tercapai kuota dan akan memberikan solusi kepada pelanggan. Juga apabila pakaian anda sangat kotor dan ini membutuhkan waktu pengerjaan yang extra lebih maka kami akan memberitahukan hal tersebut kepada anda.</p><br>
 
